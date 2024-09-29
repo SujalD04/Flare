@@ -1,13 +1,10 @@
-import { BrowserRouter as Router } from 'react-router-dom';
-import './App.css';
-import Navbar from './components/Navbar';
+import ChatPage from './pages/Chatpage';
 
 function App() {
   return (
-    <Router>
-      <Navbar />
-      {/* Other routes/components can go here */}
-    </Router>
+    <div className="App">
+      <ChatPage />
+    </div>
   );
 }
 
