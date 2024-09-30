@@ -1,4 +1,4 @@
-import ChatHeader from './ChatHeader'; // Import the new ChatHeader component
+import ChatHeader from './ChatHeader'; 
 
 const ChatWindow = () => {
   return (
