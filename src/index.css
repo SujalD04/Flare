@@ -6,13 +6,30 @@
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
+html, body {
+  height: 100%; 
+}
+
 body {
-  background-image: url("/bg.jpg");
+  background: linear-gradient(270deg, #ff7e5f, #feb47b);
+  background-size: 400% 400%; 
+  animation: gradientAnimation 15s ease infinite; 
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
   color: white;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .container {
@@ -25,7 +42,7 @@ body {
   display: flex;
 }
 
-.loading{
+.loading {
   padding: 50px;
   font-size: 36px;
   border-radius: 10px;
