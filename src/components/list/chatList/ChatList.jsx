@@ -87,6 +87,7 @@ const ChatList = () => {
         />
       </div>
       {filteredChats.map((chat) => (
+       <div className="user"> 
         <div
           className="item"
           key={chat.chatId}
@@ -112,6 +113,7 @@ const ChatList = () => {
             <p>{chat.lastMessage}</p>
           </div>
         </div>
+       </div>
       ))}
 
       {addMode && <AddUser />}
