@@ -30,20 +30,20 @@ const App = () => {
   return (
     <Router>
       <div className="container">
-        {currentUser ? (
-          <>
-            <List />
-            {chatId && <Chat />}
-            {chatId && <Detail />}
-          </>
-        ) : (
-          <Routes>
-            <Route path="/login" element={<Login />} />
-            <Route path="/signup" element={<Signup />} />
-            {/* Redirect to Login if the user visits the root path */}
-            <Route path="/" element={<Navigate to="/login" replace />} />
-          </Routes>
-        )}
+        <Routes>
+          {currentUser ? (
+            <>
+              <Route path="/" element={<><List />{chatId && <Chat />}{chatId && <Detail />}</>} />
+              <Route path="*" element={<Navigate to="/" replace />} /> 
+            </>
+          ) : (
+            <>
+              <Route path="/login" element={<Login />} />
+              <Route path="/signup" element={<Signup />} />
+              <Route path="/" element={<Navigate to="/login" replace />} /> 
+            </>
+          )}
+        </Routes>
         <Notification />
       </div>
     </Router>
