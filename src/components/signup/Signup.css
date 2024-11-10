@@ -4,6 +4,8 @@
   display: flex;
   align-items: center;
   gap: 100px;
+  background: url("../../assets/Flare.png") no-repeat center center;
+  background-position: center calc(50% - 30vh);
 }
 
 .signup .item {

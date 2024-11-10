@@ -1,6 +1,14 @@
 .chatList {
   flex: 1;
-  overflow: scroll;
+  overflow-y: scroll;
+  background-color: white; /* Keep the main background white */
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
+  border-right: 1px solid #b01244;
+}
+
+.chatList::-webkit-scrollbar {
+  display: none; 
 }
 
 .chatList .search {
@@ -12,7 +20,7 @@
 
 .chatList .searchBar {
   flex: 1;
-  background-color: rgba(17, 25, 40, 0.5);
+  background-color: rgba(17, 25, 40, 0.8);
   display: flex;
   align-items: center;
   gap: 20px;
@@ -40,15 +48,25 @@
   padding: 10px;
   border-radius: 10px;
   cursor: pointer;
+  background-color: #b01244;
+}
+
+.chatList .user {
+  background-color: #b01244; /* Background color for the user list part */
+  border-radius: 10px; /* Add border radius to the user list */
+  margin: 10px; /* Add some margin to create space around the user list */
+  overflow: hidden; /* Ensures the border radius is properly applied */;
 }
 
 .chatList .item {
   display: flex;
   align-items: center;
-  gap: 20px;
-  padding: 20px;
+  gap: 15px; /* Reduce the gap between items */
+  padding: 15px; /* Reduce the padding to make the items smaller */
   cursor: pointer;
   border-bottom: 1px solid #dddddd35;
+  background-color: transparent; /* Make item background transparent */
+  border-radius: 8px; /* Add a border radius to each individual item */
 }
 
 .chatList .item img {
@@ -72,15 +90,3 @@
   font-size: 14px;
   font-weight: 300;
 }
-
-.chatList {
-  flex: 1;
-  overflow-y: scroll;
-  scrollbar-width: none; 
-  -ms-overflow-style: none; 
-}
-
-.chatList::-webkit-scrollbar {
-  display: none; 
-}
-

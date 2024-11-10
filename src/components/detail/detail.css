@@ -1,5 +1,7 @@
 .detail {
   flex: 1;
+  color: black;
+  background-color: white
 }
 
 .detail .user {
@@ -9,6 +11,8 @@
   align-items: center;
   gap: 15px;
   border-bottom: 1px solid #dddddd35;
+  background-color: #b01244;
+  color: white;
 }
 
 .detail .user img {
@@ -68,7 +72,6 @@
 
 .detail .info .option .photos .photoItem .photoDetail span {
   font-size: 14px;
-  color: lightgray;
   font-weight: 300;
 }
 
